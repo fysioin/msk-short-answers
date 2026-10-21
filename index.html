@@ -2,55 +2,85 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MPT-MSK Short Exam Answers (Point-wise)</title>
+<meta name="theme-color" content="#12385B">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
 <style>
-:root{--navy:#12385B;--blue:#1F5C99;--accent:#B5651D;--bg:#f6f8fb;--card:#ffffff;--line:#dbe4ee;--txt:#1c2530;}
+:root{--navy:#12385B;--blue:#1F5C99;--accent:#B5651D;--bg:#f6f8fb;--card:#fff;--line:#dbe4ee;--txt:#1c2530;}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-     color:var(--txt);background:var(--bg);line-height:1.5;font-size:16px}
+     color:var(--txt);background:var(--bg);line-height:1.55;font-size:16px}
 header.top{background:linear-gradient(135deg,#12385B,#1F5C99);color:#fff;padding:26px 22px 22px}
-header.top h1{margin:0 0 6px;font-size:24px;letter-spacing:.2px}
-header.top p{margin:0;opacity:.9;font-size:14px}
+header.top h1{margin:0 0 6px;font-size:24px}
+header.top p{margin:0;opacity:.92;font-size:14px}
 .wrap{max-width:980px;margin:0 auto;padding:0 18px 60px}
-nav.index{background:var(--card);border:1px solid var(--line);border-radius:12px;
-     padding:14px 16px;margin:20px 0 26px;box-shadow:0 1px 3px rgba(18,56,91,.06)}
+nav.index{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:20px 0 26px;box-shadow:0 1px 3px rgba(18,56,91,.06)}
 nav.index h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
 nav.index .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:4px 18px}
-nav.index a{color:var(--txt);text-decoration:none;font-size:14px;padding:4px 6px;border-radius:6px;display:block}
+nav.index a{color:var(--txt);text-decoration:none;font-size:14px;padding:5px 6px;border-radius:6px;display:block}
 nav.index a:hover{background:#eef4fb;color:var(--navy)}
 nav.index a .n{display:inline-block;min-width:30px;font-weight:700;color:var(--accent)}
-section.q{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);
-     border-radius:12px;padding:20px 24px 22px;margin:0 0 22px;box-shadow:0 1px 3px rgba(18,56,91,.05);scroll-margin-top:12px}
+section.q{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:12px;padding:20px 24px 22px;margin:0 0 22px;box-shadow:0 1px 3px rgba(18,56,91,.05);scroll-margin-top:10px}
 section.q h2{margin:0 0 12px;font-size:20px;color:var(--navy);line-height:1.3}
-section.q h2 .num{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:700;
-     padding:2px 9px;border-radius:20px;margin-right:10px;vertical-align:middle}
+section.q h2 .num{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:700;padding:2px 9px;border-radius:20px;margin-right:10px;vertical-align:middle}
 section.q h3{margin:16px 0 6px;font-size:15px;color:var(--blue);text-transform:uppercase;letter-spacing:.04em}
-section.q ul{margin:4px 0 4px;padding-left:20px}
+section.q ul{margin:4px 0;padding-left:20px}
 section.q li{margin:3px 0}
 section.q li::marker{color:var(--accent)}
 strong{color:var(--accent);font-weight:700}
 p.intro{background:#eef4fb;border-left:4px solid var(--blue);padding:10px 14px;border-radius:8px;margin:0 0 8px}
 p.conclusion{background:#fbf3ea;border-left:4px solid var(--accent);padding:10px 14px;border-radius:8px;margin:14px 0 8px;font-style:italic}
-.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0;padding:8px 10px;background:#f3f7fc;border:1px dashed #b8cbe0;border-radius:8px}
-.flow .node{background:#12385B;color:#fff;padding:3px 10px;border-radius:16px;font-size:13px;font-weight:600}
+/* diagrams */
+.diagram{margin:12px 0 10px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.flow .node{background:var(--navy);color:#fff;padding:5px 11px;border-radius:16px;font-size:13px;font-weight:600}
 .flow .arrow{color:var(--accent);font-weight:700}
+.vflow{display:flex;flex-direction:column;align-items:center;gap:2px}
+.vflow .node{background:var(--navy);color:#fff;padding:6px 12px;border-radius:10px;font-size:13px;font-weight:600;text-align:center;max-width:92%}
+.vflow .varrow{color:var(--accent);font-weight:700;font-size:16px;line-height:1}
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:4px}
+.pyr{background:var(--blue);color:#fff;text-align:center;padding:6px 8px;border-radius:6px;font-size:13px;font-weight:600}
+.compare{display:flex;gap:12px;flex-wrap:wrap}
+.compare .col{flex:1 1 210px;background:#eef4fb;border:1px solid #cddcec;border-radius:10px;padding:8px 12px}
+.compare .col h4{margin:2px 0 6px;color:var(--navy);font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+.compare .col ul{margin:0;padding-left:16px}
+.compare .col li{font-size:13px;margin:2px 0}
+.icf{display:flex;flex-direction:column;align-items:center;gap:7px}
+.icf-top{background:var(--navy);color:#fff;padding:7px 14px;border-radius:8px;font-weight:700;font-size:13px;text-align:center}
+.icf-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;width:100%}
+.icf-box{flex:1 1 130px;background:#eaf1f7;border:1px solid #b8cbe0;border-radius:8px;padding:8px;text-align:center;font-size:13px;font-weight:600;color:var(--navy)}
+.icf-box.ctx{background:#fbf3ea;border-color:#e6c9a8}
+.icf-box small{display:block;font-weight:400;color:#556;font-size:11px}
+.diagram svg{width:100%;height:auto;max-width:520px;display:block;margin:0 auto}
 footer{text-align:center;color:#6b7a8d;font-size:13px;padding:10px 0 40px}
-a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-decoration:none}
+@media (max-width:640px){
+ header.top{padding:18px 14px}
+ header.top h1{font-size:19px}
+ .wrap{padding:0 12px 50px}
+ nav.index .grid{grid-template-columns:1fr}
+ section.q{padding:15px 14px 16px;border-left-width:4px}
+ section.q h2{font-size:17px}
+ section.q h3{font-size:13.5px}
+ body{font-size:15px}
+ .flow .node,.vflow .node,.pyr,.icf-box,.compare .col li,.compare .col h4{font-size:12px}
+}
 @media print{
-  body{background:#fff;font-size:12px}
-  header.top{background:#12385B !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  nav.index{display:none}
-  section.q{break-inside:avoid;box-shadow:none;border:1px solid #ccc;border-left:5px solid #1F5C99}
-  strong{color:#B5651D}
+ body{background:#fff;font-size:12px}
+ header.top{background:#12385B !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ nav.index{display:none}
+ section.q{break-inside:avoid;box-shadow:none;border:1px solid #ccc;border-left:5px solid #1F5C99}
+ strong{color:#B5651D}
 }
 </style>
 </head>
 <body>
 <header class="top">
   <h1>MPT-MSK Short Exam Answers</h1>
-  <p>Point-wise, exam-ready answers &middot; 17 topics &middot; ~500 words each</p>
+  <p>Point-wise, exam-ready answers &middot; 17 topics &middot; ~500 words each &middot; works offline</p>
 </header>
 <div class="wrap">
 <nav class="index">
@@ -76,6 +106,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q1">
 <h2><span class="num">Q1</span> Professional Values of Physiotherapy</h2>
 <p class="intro">Physiotherapy is a health profession that restores and improves movement and function. It deals with people who are in pain, weak or disabled. So a physiotherapist needs more than technical skill. They also need a clear set of moral values. This question asks about the <strong>core professional values</strong> of physiotherapy and the ethics behind them.</p>
+<div class="diagram"><div class="flow"><span class="node">Profession</span><span class="arrow">&#8594;</span><span class="node">Social Contract</span><span class="arrow">&#8594;</span><span class="node">Core Values</span><span class="arrow">&#8594;</span><span class="node">Ethical, Patient-centred Practice</span></div></div>
 <h3>What is a Profession?</h3>
 <ul><li>A profession is more than a job.</li><li>It has a special body of knowledge.</li><li>It has formal education and a licence.</li><li>It puts the public interest first, not its own.</li><li>This deal between the profession and society is the <strong>social contract</strong>.</li></ul>
 <h3>Defining Professional Values</h3>
@@ -104,6 +135,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q2">
 <h2><span class="num">Q2</span> Designing a Research Study</h2>
 <p class="intro">Research is a systematic process of asking questions and finding reliable answers. In physiotherapy, research is the base of <strong>evidence-based practice</strong>. It shows which treatments work, for whom, and at what cost. This answer explains how a physiotherapy research study is designed, step by step.</p>
+<div class="diagram"><div class="flow"><span class="node">Research Question</span><span class="arrow">&#8594;</span><span class="node">Literature Review</span><span class="arrow">&#8594;</span><span class="node">Hypothesis</span><span class="arrow">&#8594;</span><span class="node">Study Design</span><span class="arrow">&#8594;</span><span class="node">Sampling &amp; Tools</span><span class="arrow">&#8594;</span><span class="node">Data Collection</span><span class="arrow">&#8594;</span><span class="node">Analysis &amp; Report</span></div></div>
 <h3>Research Question</h3>
 <ul><li>A study starts with a clear <strong>research question</strong>.</li><li>It should not be too broad or too narrow.</li><li>Good questions follow the <strong>PICO</strong> format.</li><li>PICO = Population, Intervention, Comparison, Outcome.</li><li><strong>PICOT</strong> adds Time (the follow-up period).</li></ul>
 <h3>Literature Review</h3>
@@ -134,6 +166,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q3">
 <h2><span class="num">Q3</span> Cardiovascular Adaptation to Exercise and Training</h2>
 <p class="intro">Exercise is a strong stimulus for the cardiovascular system, which must deliver more oxygen to working muscles. Its responses are divided into <strong>acute responses</strong> during a single bout and <strong>chronic adaptations</strong> after weeks to months of training. These changes affect how exercise is prescribed and monitored. This answer describes the acute responses and the long-term central and peripheral adaptations to endurance training.</p>
+<div class="diagram compare"><div class="col"><h4>Central adaptations</h4><ul><li>Cardiac hypertrophy</li><li>Increased stroke volume</li><li>Increased cardiac output</li><li>Lower resting heart rate</li></ul></div><div class="col"><h4>Peripheral adaptations</h4><ul><li>More capillaries</li><li>More mitochondria</li><li>Wider a-vO2 difference</li><li>Increased blood volume</li></ul></div></div>
 <h3>Acute responses to a single bout</h3>
 <ul><li>Heart rate rises before exercise (anticipatory rise) due to vagal withdrawal.</li><li>Heart rate then increases linearly with workload up to maximal.</li><li>Maximal heart rate is estimated as 220 minus age.</li><li>Stroke volume rises via the Frank–Starling mechanism and greater contractility.</li></ul>
 <h3>Cardiac output and blood pressure</h3>
@@ -143,7 +176,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <h3>Central adaptations to training</h3>
 <ul><li>Eccentric cardiac hypertrophy (chamber enlargement) raises stroke volume.</li><li>Resting and submaximal bradycardia develops (40–60 beats/min in athletes).</li><li>Blood volume expands by about 10–20%.</li><li>Red cell mass and haemoglobin rise modestly.</li></ul>
 <h3>Peripheral adaptations to training</h3>
-<ul><li>Capillary density and angiogenesis increase, shortening diffusion distance.</li><li>Mitochondrial content and oxidative enzymes such as citrate synthase increase.</li><li>There is a fibre-type shift toward a more oxidative phenotype (IIx → IIa).</li><li>Improved oxygen extraction widens the a-vO₂ difference.</li></ul>
+<ul><li>Capillary density and angiogenesis increase, shortening diffusion distance.</li><li>Mitochondrial content and oxidative enzymes such as citrate synthase increase.</li><li><div class="flow"><span class="node">There is a fibre-type shift toward a more oxidative phenotype (IIx</span><span class="arrow">&#8594;</span><span class="node">IIa).</span></div></li><li>Improved oxygen extraction widens the a-vO₂ difference.</li></ul>
 <h3>The athlete's heart</h3>
 <ul><li>Morganroth hypothesis: endurance causes eccentric and strength causes concentric hypertrophy.</li><li>Physiological hypertrophy is reversible and function is normal.</li><li>Pathological hypertrophy shows fibrosis and dysfunction.</li><li>Wall thickness of 13–15 mm is a diagnostic grey zone.</li></ul>
 <h3>Detraining and exercise prescription</h3>
@@ -160,6 +193,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q4">
 <h2><span class="num">Q4</span> Fatigue</h2>
 <p class="intro">Fatigue is a common but often misunderstood concept in exercise physiology. It means the exercise-induced decline in the ability of a muscle to produce force or power. Fatigue is now seen as <strong>multifactorial</strong>, arising at many sites along the pathway from brain to muscle. This answer defines fatigue and explains its central and peripheral mechanisms, task dependency and measurement.</p>
+<div class="diagram"><div class="vflow"><span class="node">Central fatigue (brain / CNS) + Peripheral fatigue (muscle)</span><span class="varrow">&#8595;</span><span class="node">Reduced force and performance</span><span class="varrow">&#8595;</span><span class="node">Rest, sleep, nutrition, graded training</span></div></div>
 <h3>Defining fatigue</h3>
 <ul><li>Fatigue is any exercise-induced reduction in force or power.</li><li>It is a graded process that starts early, not only at task failure.</li><li>Fatigue is different from <strong>weakness</strong>, which is present at rest.</li><li>Fatigue is measured as a fall from the person's own baseline.</li></ul>
 <h3>Central fatigue</h3>
@@ -186,6 +220,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q5">
 <h2><span class="num">Q5</span> Competency-Based Education</h2>
 <p class="intro">Competency-based education (CBE) is a modern approach to training health professionals. Here, <strong>learning is fixed and time is flexible</strong>. A learner moves ahead only after showing competence. This answer explains CBE and how it applies to physiotherapy education.</p>
+<div class="diagram"><div class="flow"><span class="node">Define competencies</span><span class="arrow">&#8594;</span><span class="node">Teach &amp; learn</span><span class="arrow">&#8594;</span><span class="node">Assess performance</span><span class="arrow">&#8594;</span><span class="node">Feedback</span><span class="arrow">&#8594;</span><span class="node">Mastery shown</span><span class="arrow">&#8594;</span><span class="node">Progress</span></div></div>
 <h3>Meaning of Competence</h3>
 <ul><li><strong>Competency</strong> = an observable ability of a professional.</li><li>It combines knowledge, skills and attitudes.</li><li>It grows along a path from novice to expert.</li><li>A <strong>milestone</strong> marks a stage on this path.</li><li>An <strong>EPA</strong> is a task trusted to a learner.</li></ul>
 <h3>Core Principles</h3>
@@ -216,6 +251,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q6">
 <h2><span class="num">Q6</span> Bloom&#x27;s Taxonomy</h2>
 <p class="intro">Bloom's Taxonomy classifies educational objectives by difficulty. It was published in 1956 by <strong>Benjamin Bloom</strong>. It gives teachers a common language for learning goals. This answer explains the taxonomy and its use in physiotherapy education.</p>
+<div class="diagram pyramid"><div class="pyr" style="width:32%">Create</div><div class="pyr" style="width:46%">Evaluate</div><div class="pyr" style="width:59%">Analyse</div><div class="pyr" style="width:73%">Apply</div><div class="pyr" style="width:86%">Understand</div><div class="pyr" style="width:100%">Remember</div></div>
 <h3>Original Taxonomy (1956)</h3>
 <ul><li>Six levels, from simple to complex.</li><li><strong>Knowledge</strong> — recalling facts.</li><li><strong>Comprehension</strong> — understanding meaning.</li><li><strong>Application</strong> — using knowledge in new situations.</li><li><strong>Analysis, Synthesis, Evaluation</strong> — higher-order skills.</li></ul>
 <h3>Revised Taxonomy (2001)</h3>
@@ -247,6 +283,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q7">
 <h2><span class="num">Q7</span> Scales for Gait and Pain Assessment</h2>
 <p class="intro">Gait and pain are two of the most basic things a physiotherapist assesses. Gait is how a person walks, and pain is the most common reason patients come for treatment. Both must be measured to set goals and track progress. This question asks about the <strong>scales used to assess gait and pain</strong>.</p>
+<div class="diagram"><div class="flow"><span class="node">Initial contact</span><span class="arrow">&#8594;</span><span class="node">Stance ~60%</span><span class="arrow">&#8594;</span><span class="node">Toe-off</span><span class="arrow">&#8594;</span><span class="node">Swing ~40%</span><span class="arrow">&#8594;</span><span class="node">Next contact</span></div></div>
 <h3>Gait: Basic Terms</h3>
 <ul><li><strong>Gait</strong> is the manner of walking.</li><li>The <strong>gait cycle</strong> is from one heel strike to the next of the same foot.</li><li><strong>Stance phase</strong> is about 60% of the cycle.</li><li><strong>Swing phase</strong> is about 40%.</li><li>Normal walking speed is about 1.1–1.4 m/s.</li></ul>
 <h3>Gait Parameters</h3>
@@ -273,6 +310,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q8">
 <h2><span class="num">Q8</span> SPADI (Shoulder Pain and Disability Index)</h2>
 <p class="intro">Shoulder problems are very common in physiotherapy. They cause pain, stiffness and loss of function. Doctors need the patient's own view of the shoulder problem. The <strong>SPADI</strong> was made for this purpose. This question asks about the SPADI — its purpose, structure, scoring and use.</p>
+<div class="diagram icf"><div class="icf-top">SPADI &mdash; 13 items</div><div class="icf-row"><div class="icf-box">Pain subscale (5 items)</div><div class="icf-box">Disability subscale (8 items)</div></div><div class="icf-row"><div class="icf-box ctx">Total score 0-100% &nbsp;(higher = worse)</div></div></div>
 <h3>Purpose</h3>
 <ul><li>Measures <strong>pain</strong> and <strong>disability</strong> of the shoulder.</li><li>It is <strong>self-reported</strong> (no clinician rating).</li><li>It is <strong>region-specific</strong> for the shoulder.</li><li>Used in rotator cuff problems, frozen shoulder and shoulder arthritis.</li><li>Complements, but does not replace, physical examination.</li></ul>
 <h3>Development</h3>
@@ -301,10 +339,11 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q9">
 <h2><span class="num">Q9</span> Muscle Plasticity</h2>
 <p class="intro">Skeletal muscle is highly adaptable and changes with the demands placed on it. It can alter its size, fibre type, organelles and proteins — a property called <strong>muscle plasticity</strong>. This allows strength gains with resistance training and fatigue resistance with endurance training. This answer defines plasticity and describes fibre types, hypertrophy, atrophy and its clinical uses.</p>
+<div class="diagram compare"><div class="col"><h4>Training</h4><ul><li>Hypertrophy (bigger fibres)</li><li>Increased strength</li><li>Endurance &amp;rarr; type I fibres</li></ul></div><div class="col"><h4>Disuse / ageing</h4><ul><li>Atrophy (smaller fibres)</li><li>Decreased strength</li><li>Strength work &amp;rarr; type II</li></ul></div></div>
 <h3>Defining muscle plasticity</h3>
 <ul><li>Plasticity is the ability of muscle to change its <strong>phenotype</strong>.</li><li>It includes changes in fibre cross-sectional area.</li><li>It includes changes in fibre-type composition (myosin heavy chain).</li><li>It includes changes in organelles and protein content.</li><li>Adaptation is <strong>specific to the stimulus</strong>.</li></ul>
 <h3>Fibre types and their transitions</h3>
-<ul><li>Type I fibres are slow, oxidative and fatigue-resistant.</li><li>Type IIa fibres are fast, moderately oxidative and fatigue-resistant.</li><li>Type IIx fibres are fast, glycolytic and easily fatigued.</li><li>Endurance training shifts IIx → IIa and increases oxidative fibres.</li><li>Disuse shifts fibres toward faster types.</li></ul>
+<ul><li>Type I fibres are slow, oxidative and fatigue-resistant.</li><li>Type IIa fibres are fast, moderately oxidative and fatigue-resistant.</li><li>Type IIx fibres are fast, glycolytic and easily fatigued.</li><li><div class="flow"><span class="node">Endurance training shifts IIx</span><span class="arrow">&#8594;</span><span class="node">IIa and increases oxidative fibres.</span></div></li><li>Disuse shifts fibres toward faster types.</li></ul>
 <h3>Neural versus morphological adaptation</h3>
 <ul><li>Early strength gains are mainly from <strong>neural adaptation</strong>.</li><li>This includes better motor-unit recruitment and firing.</li><li>Reduced antagonist co-contraction also helps.</li><li>Hypertrophy becomes dominant after several weeks.</li><li>Both processes matter clinically: neural change gives early gains and hypertrophy gives long-term gains.</li></ul>
 <h3>Hypertrophy</h3>
@@ -327,6 +366,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q10">
 <h2><span class="num">Q10</span> Body Composition</h2>
 <p class="intro">Body composition means the different parts that together make up total body weight. It mainly divides the body into <strong>fat mass</strong> and <strong>fat-free mass</strong>. It is more useful than weight or BMI because it shows the *quality* of the body, not just its size. This answer describes the compartment models, fat distribution, the main assessment methods and why body composition matters in physiotherapy.</p>
+<div class="diagram icf"><div class="icf-top">Body Composition</div><div class="icf-row"><div class="icf-box">Fat Mass</div><div class="icf-box">Fat-Free Mass<br><small>muscle, bone, water, organs</small></div></div></div>
 <h3>Definition and Levels of Organisation</h3>
 <ul><li>Body composition is the proportion of fat and lean tissue in the body.</li><li>It is described at five levels: atomic, molecular, cellular, tissue and whole-body.</li><li>Clinically the <strong>molecular</strong> and <strong>tissue</strong> levels are the most useful.</li></ul>
 <h3>Compartment Models</h3>
@@ -350,6 +390,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q11">
 <h2><span class="num">Q11</span> Influence of Age and Gender in Exercise and Training</h2>
 <p class="intro">People respond to exercise differently, and two key sources of this variation are <strong>age</strong> and <strong>sex</strong>. Physiological capacity and the response to training differ across the lifespan and between men and women. This affects how exercise should be prescribed. This answer describes sex differences, ageing changes and training responses at different ages and in both sexes.</p>
+<div class="diagram compare"><div class="col"><h4>Age</h4><ul><li>Child: lower anaerobic capacity</li><li>Adult: peak in 20s-30s</li><li>Elderly: less strength &amp;amp; VO2max</li></ul></div><div class="col"><h4>Gender</h4><ul><li>Women: less muscle, more fat</li><li>Men: larger heart, more haemoglobin</li><li>Differences narrow with training</li></ul></div></div>
 <h3>Physiological differences between the sexes</h3>
 <ul><li>Women generally have higher body fat and lower lean mass.</li><li>Men have greater absolute strength and muscle mass.</li><li>Men have a larger heart, greater blood volume and higher haemoglobin.</li><li>Men have a higher absolute V̇O₂max, but it narrows per kg lean mass.</li></ul>
 <h3>Hormones and the menstrual cycle</h3>
@@ -376,6 +417,21 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q12">
 <h2><span class="num">Q12</span> Electrical Properties of Muscle and Nerve</h2>
 <p class="intro">Nerve and skeletal muscle are <strong>excitable tissues</strong>. They can produce and carry electrical signals across their membranes. This property underlies movement, sensation and every form of electrotherapy. This answer explains the resting membrane potential, the action potential, conduction, the neuromuscular junction and the measures of excitability.</p>
+<div class="diagram"><svg viewBox="0 0 340 150" role="img" aria-label="Action potential curve">
+<line x1="34" y1="14" x2="34" y2="132" stroke="#9DB4CC" stroke-width="1.4"/>
+<line x1="34" y1="132" x2="330" y2="132" stroke="#9DB4CC" stroke-width="1.4"/>
+<line x1="34" y1="50" x2="326" y2="50" stroke="#c9d6e4" stroke-dasharray="4 4"/>
+<text x="38" y="47" font-size="9" fill="#7a8aa0">+30 mV</text>
+<line x1="34" y1="88" x2="326" y2="88" stroke="#c9d6e4" stroke-dasharray="4 4"/>
+<text x="38" y="85" font-size="9" fill="#7a8aa0">-55 mV threshold</text>
+<line x1="34" y1="114" x2="326" y2="114" stroke="#c9d6e4" stroke-dasharray="4 4"/>
+<text x="38" y="111" font-size="9" fill="#7a8aa0">-70 mV rest</text>
+<polyline points="48,114 96,114 122,50 138,44 158,116 168,124 184,114 300,114" fill="none" stroke="#B5651D" stroke-width="2.5"/>
+<text x="118" y="34" font-size="9" fill="#12385B" text-anchor="middle">Depolarisation</text>
+<text x="238" y="106" font-size="9" fill="#12385B" text-anchor="middle">Repolarisation</text>
+<text x="176" y="143" font-size="9" fill="#12385B" text-anchor="middle">hyperpol.</text>
+<text x="326" y="127" font-size="9" fill="#7a8aa0" text-anchor="end">Time &#8594;</text>
+</svg></div>
 <h3>Resting Membrane Potential and Ionic Basis</h3>
 <ul><li><strong>RMP</strong> is the voltage across an unstimulated cell membrane.</li><li>The inside is negative: about <strong>-70 mV</strong> in nerve, <strong>-90 mV</strong> in muscle.</li><li>The membrane is far more permeable to <strong>K+</strong> than to Na+ at rest.</li><li><strong>Na+/K+-ATPase</strong> pumps 3 Na+ out and 2 K+ in; it is <strong>electrogenic</strong>.</li><li>Inside is rich in K+; outside is rich in Na+ and Cl-.</li></ul>
 <h3>The Action Potential</h3>
@@ -399,6 +455,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q13">
 <h2><span class="num">Q13</span> Learning Models for Competency and Instrumentation</h2>
 <p class="intro">Physiotherapy education must produce <strong>competent</strong> graduates, not just knowledgeable ones. Educators use several <strong>learning models</strong> to explain how competence develops. <strong>Instrumentation</strong> means the tools used to measure whether competence has been achieved. This answer describes the main learning models and the assessment tools that operationalise them.</p>
+<div class="diagram pyramid"><div class="pyr" style="width:32%">Does</div><div class="pyr" style="width:55%">Shows how</div><div class="pyr" style="width:77%">Knows how</div><div class="pyr" style="width:100%">Knows</div></div>
 <h3>Behaviourist Model</h3>
 <ul><li>Learning is a change in <strong>observable behaviour</strong>.</li><li>Uses <strong>stimulus, response and reinforcement</strong>.</li><li>The teacher breaks skills into small steps.</li><li>Good for manual skills, goniometry and patient handling.</li><li>Reinforced by checklist-based practical exams and drills.</li><li>Limitation: ignores reasoning, so it makes technicians.</li></ul>
 <h3>Cognitivist Model</h3>
@@ -422,6 +479,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q14">
 <h2><span class="num">Q14</span> International Classification of Functioning, Disability and Health (ICF)</h2>
 <p class="intro">Earlier, disability was seen as a problem inside the person (medical model). Others said it comes from society and the environment (social model). The WHO combined both ideas into the <strong>ICF</strong> in 2001. This question asks about the ICF — its background, parts, codes and uses.</p>
+<div class="diagram icf"><div class="icf-top">Health Condition (disease / disorder)</div><div class="icf-row"><div class="icf-box">Body Functions &amp; Structures</div><div class="icf-box">Activities</div><div class="icf-box">Participation</div></div><div class="icf-row"><div class="icf-box ctx">Environmental Factors</div><div class="icf-box ctx">Personal Factors</div></div></div>
 <h3>Background and Purpose</h3>
 <ul><li>Adopted by the <strong>WHO in 2001</strong>.</li><li>Replaced the older <strong>ICIDH (1980)</strong>.</li><li>Gives a <strong>common language</strong> for functioning and disability.</li><li>Used across disciplines, settings and countries.</li><li>Part of the WHO family with the <strong>ICD</strong> (diseases) and <strong>ICHI</strong> (interventions).</li></ul>
 <h3>The Biopsychosocial Model</h3>
@@ -450,6 +508,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q15">
 <h2><span class="num">Q15</span> Neuromuscular Electrical Stimulation (NMES) and Its Effects on Body Systems</h2>
 <p class="intro"><strong>NMES</strong> uses an electrical current to produce an involuntary muscle contraction. It works by depolarising the motor axons that supply a muscle. It is useful when a patient cannot or will not contract a muscle voluntarily. This answer covers its principle, parameters, effects on body systems, clinical uses and precautions.</p>
+<div class="diagram"><div class="flow"><span class="node">Electrical current</span><span class="arrow">&#8594;</span><span class="node">Electrodes on skin</span><span class="arrow">&#8594;</span><span class="node">Motor axon depolarisation</span><span class="arrow">&#8594;</span><span class="node">Muscle contraction</span><span class="arrow">&#8594;</span><span class="node">Strength / circulation / pain effects</span></div></div>
 <h3>Principle and Physics</h3>
 <ul><li>Current passes through surface electrodes over the muscle or motor point.</li><li>It <strong>depolarises intramuscular motor axons</strong>.</li><li>Action potentials reach the neuromuscular junction and release ACh.</li><li>The evoked contraction is physiologically like a voluntary one.</li><li><strong>Biphasic</strong> currents are preferred for comfort and tissue safety.</li></ul>
 <h3>Stimulation Parameters</h3>
@@ -473,6 +532,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q16">
 <h2><span class="num">Q16</span> Methods of Data Collection</h2>
 <p class="intro">Data collection is the systematic gathering of information to answer a research question. Good data decides the value of a study. Physiotherapy uses many methods to measure pain, movement and function. This answer describes the main methods of data collection and how to choose among them.</p>
+<div class="diagram icf"><div class="icf-top">Data Collection</div><div class="icf-row"><div class="icf-box">Primary data<br><small>interview, questionnaire, observation, tests</small></div><div class="icf-box">Secondary data<br><small>records, registers, journals</small></div></div></div>
 <h3>Primary versus Secondary Data</h3>
 <ul><li><strong>Primary data</strong> are collected fresh for the study.</li><li><strong>Secondary data</strong> already exist (records, registries).</li><li>Primary gives control; secondary is cheaper and faster.</li><li>Secondary data quality is often uncertain.</li></ul>
 <h3>Observation</h3>
@@ -505,6 +565,7 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 <section class="q" id="q17">
 <h2><span class="num">Q17</span> Tyler&#x27;s Principles of Curriculum Development</h2>
 <p class="intro"><strong>Ralph Tyler</strong> (1949) is called the father of curriculum development. His book *Basic Principles of Curriculum and Instruction* gave a simple, rational way to plan a curriculum. His approach is known as the <strong>objectives</strong> or <strong>rationale</strong> model. This answer states his four questions and explains the model and its evaluation.</p>
+<div class="diagram"><div class="flow"><span class="node">Objectives</span><span class="arrow">&#8594;</span><span class="node">Learning Experiences</span><span class="arrow">&#8594;</span><span class="node">Organisation</span><span class="arrow">&#8594;</span><span class="node">Evaluation</span></div></div>
 <h3>Ralph Tyler and the 1949 Book</h3>
 <ul><li>Tyler published his basic principles in <strong>1949</strong>.</li><li>It grew from the <strong>Eight-Year Study</strong> and his teaching work.</li><li>It offers "a rationale for viewing and interpreting the curriculum".</li><li>It is a <strong>theory of procedure</strong>, not of content.</li><li>It remains the dominant curriculum logic today.</li></ul>
 <h3>The Four Questions and the Objectives Model</h3>
@@ -527,5 +588,12 @@ a.top{display:inline-block;margin-top:8px;font-size:12px;color:var(--blue);text-
 </section>
 <footer>MPT-MSK Short Exam Answers &middot; concise point-wise revision &middot; <a href="#top">Back to top</a></footer>
 </div>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  });
+}
+</script>
 </body>
 </html>
