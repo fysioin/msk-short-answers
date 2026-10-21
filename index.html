@@ -70,6 +70,20 @@ section.q.done{border-left-color:#2E8B57}
 .progress button{background:var(--blue);color:#fff;border:0;border-radius:8px;padding:5px 10px;font-size:12px;cursor:pointer}
 .navq.done{background:#eaf5ee}
 .navq.done .n::after{content:" ¹3";color:#2E8B57}
+.navrow{display:flex;align-items:center;gap:6px}
+.navrow .navq{flex:1;min-width:0}
+.tickidx{width:18px;height:18px}
+.side{position:fixed;top:78px;right:0;width:160px;max-height:calc(100vh - 78px);overflow-y:auto;padding:0 10px 16px;display:none;z-index:45}
+.side .sidetitle{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#8a9bb0;margin:0 0 6px 6px}
+.sideq{display:block;font-size:12px;color:var(--navy);text-decoration:none;padding:5px 8px;border-radius:8px;margin:2px 0;background:#fff;border:1px solid var(--line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sideq b{color:var(--accent);margin-right:6px}
+.sideq.active{background:var(--navy);color:#fff}
+.sideq.active b{color:#ffd9b3}
+.sideq.done{background:#eaf5ee}
+.sidebot{position:fixed;left:0;right:0;bottom:0;display:flex;gap:6px;overflow-x:auto;background:#fff;border-top:1px solid var(--line);padding:6px 8px;z-index:45}
+.sidebot .sideq{margin:0;flex:0 0 auto}
+@media(min-width:1300px){.side{display:block}.sidebot{display:none}.wrap{max-width:880px}}
+@media(max-width:1299px){.wrap{padding-bottom:70px}}
 footer{text-align:center;color:#6b7a8d;font-size:13px;padding:10px 0 40px}
 @media (max-width:640px){
  header.top{padding:18px 14px}
@@ -96,27 +110,44 @@ footer{text-align:center;color:#6b7a8d;font-size:13px;padding:10px 0 40px}
   <h1>MPT-MSK Short Exam Answers</h1>
   <p>Point-wise, exam-ready answers &middot; 17 topics &middot; ~500 words each &middot; works offline</p>
 </header>
+<nav class="side" aria-label="Jump to question"><div class="sidetitle">Jump to</div><a class="sideq" data-q="Q1" href="#q1"><b>1</b> Values</a>
+<a class="sideq" data-q="Q2" href="#q2"><b>2</b> Research</a>
+<a class="sideq" data-q="Q3" href="#q3"><b>3</b> Cardiac</a>
+<a class="sideq" data-q="Q4" href="#q4"><b>4</b> Fatigue</a>
+<a class="sideq" data-q="Q5" href="#q5"><b>5</b> CBE</a>
+<a class="sideq" data-q="Q6" href="#q6"><b>6</b> Bloom</a>
+<a class="sideq" data-q="Q7" href="#q7"><b>7</b> Gait / Pain</a>
+<a class="sideq" data-q="Q8" href="#q8"><b>8</b> SPADI</a>
+<a class="sideq" data-q="Q9" href="#q9"><b>9</b> Muscle</a>
+<a class="sideq" data-q="Q10" href="#q10"><b>10</b> Body comp</a>
+<a class="sideq" data-q="Q11" href="#q11"><b>11</b> Age / Gender</a>
+<a class="sideq" data-q="Q12" href="#q12"><b>12</b> Nerve</a>
+<a class="sideq" data-q="Q13" href="#q13"><b>13</b> Learning</a>
+<a class="sideq" data-q="Q14" href="#q14"><b>14</b> ICF</a>
+<a class="sideq" data-q="Q15" href="#q15"><b>15</b> NMES</a>
+<a class="sideq" data-q="Q16" href="#q16"><b>16</b> Data</a>
+<a class="sideq" data-q="Q17" href="#q17"><b>17</b> Tyler</a></nav>
 <div class="wrap">
 <nav class="index">
   <h2>Contents</h2>
   <div class="progress"><span id="prog">0 / 17 revised</span><button id="resetTicks" type="button">Reset ticks</button></div>
-  <div class="grid"><a class="navq" data-q="Q1" href="#q1"><span class="n">Q1</span> Professional Values of Physiotherapy</a>
-<a class="navq" data-q="Q2" href="#q2"><span class="n">Q2</span> Designing a Research Study</a>
-<a class="navq" data-q="Q3" href="#q3"><span class="n">Q3</span> Cardiovascular Adaptation to Exercise and Training</a>
-<a class="navq" data-q="Q4" href="#q4"><span class="n">Q4</span> Fatigue</a>
-<a class="navq" data-q="Q5" href="#q5"><span class="n">Q5</span> Competency-Based Education</a>
-<a class="navq" data-q="Q6" href="#q6"><span class="n">Q6</span> Bloom&#x27;s Taxonomy</a>
-<a class="navq" data-q="Q7" href="#q7"><span class="n">Q7</span> Scales for Gait and Pain Assessment</a>
-<a class="navq" data-q="Q8" href="#q8"><span class="n">Q8</span> SPADI (Shoulder Pain and Disability Index)</a>
-<a class="navq" data-q="Q9" href="#q9"><span class="n">Q9</span> Muscle Plasticity</a>
-<a class="navq" data-q="Q10" href="#q10"><span class="n">Q10</span> Body Composition</a>
-<a class="navq" data-q="Q11" href="#q11"><span class="n">Q11</span> Influence of Age and Gender in Exercise and Training</a>
-<a class="navq" data-q="Q12" href="#q12"><span class="n">Q12</span> Electrical Properties of Muscle and Nerve</a>
-<a class="navq" data-q="Q13" href="#q13"><span class="n">Q13</span> Learning Models for Competency and Instrumentation</a>
-<a class="navq" data-q="Q14" href="#q14"><span class="n">Q14</span> International Classification of Functioning, Disability and Health (ICF)</a>
-<a class="navq" data-q="Q15" href="#q15"><span class="n">Q15</span> Neuromuscular Electrical Stimulation (NMES) and Its Effects on Body Systems</a>
-<a class="navq" data-q="Q16" href="#q16"><span class="n">Q16</span> Methods of Data Collection</a>
-<a class="navq" data-q="Q17" href="#q17"><span class="n">Q17</span> Tyler&#x27;s Principles of Curriculum Development</a></div>
+  <div class="grid"><div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q1" aria-label="Mark Q1 revised"><a class="navq" data-q="Q1" href="#q1"><span class="n">Q1</span> Professional Values of Physiotherapy</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q2" aria-label="Mark Q2 revised"><a class="navq" data-q="Q2" href="#q2"><span class="n">Q2</span> Designing a Research Study</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q3" aria-label="Mark Q3 revised"><a class="navq" data-q="Q3" href="#q3"><span class="n">Q3</span> Cardiovascular Adaptation to Exercise and Training</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q4" aria-label="Mark Q4 revised"><a class="navq" data-q="Q4" href="#q4"><span class="n">Q4</span> Fatigue</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q5" aria-label="Mark Q5 revised"><a class="navq" data-q="Q5" href="#q5"><span class="n">Q5</span> Competency-Based Education</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q6" aria-label="Mark Q6 revised"><a class="navq" data-q="Q6" href="#q6"><span class="n">Q6</span> Bloom&#x27;s Taxonomy</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q7" aria-label="Mark Q7 revised"><a class="navq" data-q="Q7" href="#q7"><span class="n">Q7</span> Scales for Gait and Pain Assessment</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q8" aria-label="Mark Q8 revised"><a class="navq" data-q="Q8" href="#q8"><span class="n">Q8</span> SPADI (Shoulder Pain and Disability Index)</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q9" aria-label="Mark Q9 revised"><a class="navq" data-q="Q9" href="#q9"><span class="n">Q9</span> Muscle Plasticity</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q10" aria-label="Mark Q10 revised"><a class="navq" data-q="Q10" href="#q10"><span class="n">Q10</span> Body Composition</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q11" aria-label="Mark Q11 revised"><a class="navq" data-q="Q11" href="#q11"><span class="n">Q11</span> Influence of Age and Gender in Exercise and Training</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q12" aria-label="Mark Q12 revised"><a class="navq" data-q="Q12" href="#q12"><span class="n">Q12</span> Electrical Properties of Muscle and Nerve</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q13" aria-label="Mark Q13 revised"><a class="navq" data-q="Q13" href="#q13"><span class="n">Q13</span> Learning Models for Competency and Instrumentation</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q14" aria-label="Mark Q14 revised"><a class="navq" data-q="Q14" href="#q14"><span class="n">Q14</span> International Classification of Functioning, Disability and Health (ICF)</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q15" aria-label="Mark Q15 revised"><a class="navq" data-q="Q15" href="#q15"><span class="n">Q15</span> Neuromuscular Electrical Stimulation (NMES) and Its Effects on Body Systems</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q16" aria-label="Mark Q16 revised"><a class="navq" data-q="Q16" href="#q16"><span class="n">Q16</span> Methods of Data Collection</a></div>
+<div class="navrow"><input type="checkbox" class="tick tickidx" data-q="Q17" aria-label="Mark Q17 revised"><a class="navq" data-q="Q17" href="#q17"><span class="n">Q17</span> Tyler&#x27;s Principles of Curriculum Development</a></div></div>
 </nav>
 <section class="q" id="q1">
 <h2 class="qhead"><input type="checkbox" class="tick" data-q="Q1" aria-label="Mark Q1 revised"><span class="num">Q1</span> <span class="qt">Professional Values of Physiotherapy</span></h2>
@@ -625,6 +656,23 @@ footer{text-align:center;color:#6b7a8d;font-size:13px;padding:10px 0 40px}
 </section>
 <footer>MPT-MSK Short Exam Answers &middot; concise point-wise revision &middot; <a href="#top">Back to top</a></footer>
 </div>
+<nav class="sidebot" aria-label="Jump to question"><a class="sideq" data-q="Q1" href="#q1"><b>1</b> Values</a>
+<a class="sideq" data-q="Q2" href="#q2"><b>2</b> Research</a>
+<a class="sideq" data-q="Q3" href="#q3"><b>3</b> Cardiac</a>
+<a class="sideq" data-q="Q4" href="#q4"><b>4</b> Fatigue</a>
+<a class="sideq" data-q="Q5" href="#q5"><b>5</b> CBE</a>
+<a class="sideq" data-q="Q6" href="#q6"><b>6</b> Bloom</a>
+<a class="sideq" data-q="Q7" href="#q7"><b>7</b> Gait / Pain</a>
+<a class="sideq" data-q="Q8" href="#q8"><b>8</b> SPADI</a>
+<a class="sideq" data-q="Q9" href="#q9"><b>9</b> Muscle</a>
+<a class="sideq" data-q="Q10" href="#q10"><b>10</b> Body comp</a>
+<a class="sideq" data-q="Q11" href="#q11"><b>11</b> Age / Gender</a>
+<a class="sideq" data-q="Q12" href="#q12"><b>12</b> Nerve</a>
+<a class="sideq" data-q="Q13" href="#q13"><b>13</b> Learning</a>
+<a class="sideq" data-q="Q14" href="#q14"><b>14</b> ICF</a>
+<a class="sideq" data-q="Q15" href="#q15"><b>15</b> NMES</a>
+<a class="sideq" data-q="Q16" href="#q16"><b>16</b> Data</a>
+<a class="sideq" data-q="Q17" href="#q17"><b>17</b> Tyler</a></nav>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
@@ -635,34 +683,49 @@ if ('serviceWorker' in navigator) {
 <script>
 (function () {
   var KEY = 'msk-revised-v1';
-  var boxes = document.querySelectorAll('input.tick');
+  var boxes = [].slice.call(document.querySelectorAll('input.tick'));
   var state = {};
   try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { state = {}; }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
   function mark(q, on) {
-    var link = document.querySelector('.navq[data-q="' + q + '"]');
-    if (link) link.classList.toggle('done', on);
+    document.querySelectorAll('.navq[data-q="' + q + '"], .sideq[data-q="' + q + '"]').forEach(function (el) { el.classList.toggle('done', on); });
     var sec = document.getElementById('q' + q.replace('Q', ''));
     if (sec) sec.classList.toggle('done', on);
   }
   function updateProg() {
-    var n = 0;
-    boxes.forEach(function (b) { if (b.checked) n++; });
+    var seen = {}, n = 0, total = 0;
+    boxes.forEach(function (b) { var q = b.getAttribute('data-q'); if (!seen[q]) { seen[q] = 1; total++; if (state[q]) n++; } });
     var el = document.getElementById('prog');
-    if (el) el.textContent = n + ' / ' + boxes.length + ' revised';
+    if (el) el.textContent = n + ' / ' + total + ' revised';
   }
   boxes.forEach(function (b) {
     var q = b.getAttribute('data-q');
     if (state[q]) b.checked = true;
-    mark(q, b.checked);
-    b.addEventListener('change', function () { state[q] = b.checked; save(); mark(q, b.checked); updateProg(); });
+    mark(q, !!state[q]);
+    b.addEventListener('change', function () {
+      state[q] = b.checked;
+      boxes.forEach(function (o) { if (o.getAttribute('data-q') === q) o.checked = b.checked; });
+      save(); mark(q, b.checked); updateProg();
+    });
   });
   updateProg();
   var r = document.getElementById('resetTicks');
   if (r) r.addEventListener('click', function () {
-    boxes.forEach(function (b) { b.checked = false; state[b.getAttribute('data-q')] = false; mark(b.getAttribute('data-q'), false); });
+    boxes.forEach(function (b) { b.checked = false; });
+    Object.keys(state).forEach(function (k) { state[k] = false; });
+    document.querySelectorAll('.navq, .sideq').forEach(function (el) { el.classList.remove('done'); });
+    document.querySelectorAll('section.q').forEach(function (s) { s.classList.remove('done'); });
     save(); updateProg();
   });
+  var secs = [].slice.call(document.querySelectorAll('section.q'));
+  function spy() {
+    var y = window.scrollY + 130, cur = secs.length ? secs[0].id : null;
+    secs.forEach(function (s) { if (s.offsetTop <= y) cur = s.id; });
+    document.querySelectorAll('.sideq').forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('load', spy);
+  spy();
 })();
 </script>
 </body>
